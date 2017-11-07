@@ -1,4 +1,8 @@
 # static-healthcheck
+[![Go Report Card](https://goreportcard.com/badge/wtfcoderz/static-healthcheck)](http://goreportcard.com/report/wtfcoderz/static-healthcheck)
+[![](https://images.microbadger.com/badges/image/wtfcoderz/static-healthcheck.svg)](https://microbadger.com/images/wtfcoderz/static-healthcheck)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/wtfcoderz/static-healthcheck/blob/master/LICENSE.md)
+[![Docker Automated buil](https://img.shields.io/badge/docker--hub-automatic--build-blue.svg)](https://hub.docker.com/r/wtfcoderz/static-healthcheck/)
 
 This project was created to add healthcheck in docker images without installing curl or other tools  
 This is useful for statically compiled images `FROM scratch` for example  
