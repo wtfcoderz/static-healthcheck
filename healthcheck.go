@@ -27,30 +27,30 @@ func main() {
 	flag.Var(&httpFlags, "http", "httpcheck: ex: my.domain.com:80")
 	flag.Parse()
 
-	for _, tcp_addr := range tcpFlags {
-		conn, err := net.Dial("tcp", tcp_addr)
+	for _, tcpAddr := range tcpFlags {
+		conn, err := net.Dial("tcp", tcpAddr)
 		if err != nil {
 			log.Println("Connection error:", err)
-			log.Println(tcp_addr, ": Unreachable")
+			log.Println(tcpAddr, ": Unreachable")
 			os.Exit(1)
 		} else {
 			defer conn.Close()
-			log.Println(tcp_addr, ": Online")
+			log.Println(tcpAddr, ": Online")
 		}
 	}
 
-	for _, http_url := range httpFlags {
-		resp, err := http.Get(http_url)
+	for _, httpUrl := range httpFlags {
+		resp, err := http.Get(httpUrl)
 		if err != nil {
 			// handle error
 			log.Println("Connection error:", err)
-			log.Println(http_url, ": Unreachable")
+			log.Println(httpUrl, ": Unreachable")
 			os.Exit(1)
 		} else {
 			if resp.StatusCode < 400 {
-				log.Println(http_url, ": Online - response:", resp.StatusCode)
+				log.Println(httpUrl, ": Online - response:", resp.StatusCode)
 			} else {
-				log.Println(http_url, ": Error - response:", resp.StatusCode)
+				log.Println(httpUrl, ": Error - response:", resp.StatusCode)
 				os.Exit(1)
 			}
 		}
