@@ -1,5 +1,6 @@
 # static-healthcheck
 [![Go Report Card](https://goreportcard.com/badge/wtfcoderz/static-healthcheck)](http://goreportcard.com/report/wtfcoderz/static-healthcheck)
+[![Codefresh build status]( https://g.codefresh.io/api/badges/build?repoOwner=wtfcoderz&repoName=static-healthcheck&branch=master&pipelineName=static-healthcheck&accountName=wtfkr0&type=cf-1)]( https://g.codefresh.io/repositories/wtfcoderz/static-healthcheck/builds?filter=trigger:build;branch:master;service:5a01d6647062b6000195c179~static-healthcheck)
 [![](https://images.microbadger.com/badges/image/wtfcoderz/static-healthcheck.svg)](https://microbadger.com/images/wtfcoderz/static-healthcheck)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/wtfcoderz/static-healthcheck/blob/master/LICENSE)
 [![Docker Automated buil](https://img.shields.io/badge/docker--hub-automatic--build-blue.svg)](https://hub.docker.com/r/wtfcoderz/static-healthcheck/)
