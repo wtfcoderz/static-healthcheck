@@ -1,7 +1,7 @@
 # static-healthcheck
 
-This project was created to add healthcheck in docker images without installing curl or other tools
-This is useful for statically compiled images `FROM scratch` for example
+This project was created to add healthcheck in docker images without installing curl or other tools  
+This is useful for statically compiled images `FROM scratch` for example  
 
 ## Standalone Usage
 
@@ -13,7 +13,7 @@ Usage of /healthcheck:
         tcpcheck: ex: my.domain.com:80
 ```
 
-These flags accept multiple values :
+These flags accept multiple values :  
 `/healthcheck -tcp my.domain.com:80 -http my2.domain.com:80 -http 127.0.0.1:8080`
 
 -http do a GET of the provided URI : return OK if response code < 400  
@@ -24,13 +24,13 @@ Return 1 otherwise
 
 ## Dockerfile Usage
 
-In fact, you only need two lines in your existing Dockerfile to add this
+In fact, you only need two lines in your existing Dockerfile to add this  
 ```
 COPY        --from=wtfcoderz/static-healthcheck /healthcheck /
 HEALTHCHECK --interval=5s --timeout=2s --start-period=1s --retries=2 CMD ["/healthcheck", "-tcp", "127.0.0.1:80"]
 ```
 
-Dockerfile example for Caddy server with a Healthcheck
+Dockerfile example for Caddy server with a Healthcheck  
 ```
 FROM  alpine:latest as build
 RUN   apk add --no-cache curl \
