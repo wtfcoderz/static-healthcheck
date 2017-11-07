@@ -39,18 +39,18 @@ func main() {
 		}
 	}
 
-	for _, httpUrl := range httpFlags {
-		resp, err := http.Get(httpUrl)
+	for _, httpURL := range httpFlags {
+		resp, err := http.Get(httpURL)
 		if err != nil {
 			// handle error
 			log.Println("Connection error:", err)
-			log.Println(httpUrl, ": Unreachable")
+			log.Println(httpURL, ": Unreachable")
 			os.Exit(1)
 		} else {
 			if resp.StatusCode < 400 {
-				log.Println(httpUrl, ": Online - response:", resp.StatusCode)
+				log.Println(httpURL, ": Online - response:", resp.StatusCode)
 			} else {
-				log.Println(httpUrl, ": Error - response:", resp.StatusCode)
+				log.Println(httpURL, ": Error - response:", resp.StatusCode)
 				os.Exit(1)
 			}
 		}
